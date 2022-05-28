@@ -1,17 +1,17 @@
-# This is a sample Python script.
+import requests
+from bs4 import BeautifulSoup
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+with open("dao_maker.html") as file:
+    src = file.read()
+
+# url = 'https://daomaker.com/'
+# response = requests.get(url)
+soup = BeautifulSoup(src, 'lxml')
+
+company_names = []
+some_data = soup.find_all("div", {"class": "company_single"})
+for item in some_data:
+    company_names.append(item.find("h4").text.strip())
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-213
+print(company_names)
