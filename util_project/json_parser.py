@@ -1,5 +1,6 @@
 from selenium import webdriver
 import re
+import time
 
 
 def get_json(url):
@@ -7,6 +8,7 @@ def get_json(url):
 
     try:
         driver.get(url=url)
+        time.sleep(5)
         json = driver.find_element_by_id("com.daomaker.daopad-state")
         return json.get_attribute("innerHTML")
 
@@ -28,4 +30,4 @@ def get_first_ticket(json):
 def get_list_tickets(json):
     if json == "error":
         return "no ticket (missing dao pad state)"
-    return re.findall(r'\w*(?=&q;,&q;price_per_token)', string=json)
+    return re.findall(r'(?<={&q;key&q;:&q;Ticker:&q;,&q;value&q;:&q;)\w*', string=json)
