@@ -17,7 +17,6 @@ try:
 
     time.sleep(5)
     some_data = driver.find_elements_by_class_name("metrics__block")
-
     ticker = some_data[0].find_element(By.CSS_SELECTOR, "h3").get_attribute("innerHTML")
 
 except Exception as ex:
