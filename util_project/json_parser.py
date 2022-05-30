@@ -29,7 +29,6 @@ def get_first_ticket(json):
         result = re.findall(r'(?<=coin_ticker&q;:&q;)\w*', string=json)
     if len(result) == 0 or result[0] == "0" or result[0] == "":
         result = re.findall(r'(?<=total_hardcap&q;:123,&q;coin_ticker&q;:&q;)\w*', string=json)
-
     if len(result) == 0:
         return "No ticket found (after 2 tries)"
     return result[0]
