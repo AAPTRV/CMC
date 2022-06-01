@@ -1,28 +1,22 @@
-
 import util_project.projects_names_parser
 import util_project.json_parser
 import util_project.json_parser_bs4
-
+from API.coingecko import coingecko_api
+import json
+import urllib.request
+import pandas as pd
+from classes.Project import Project
 
 url = "https://daomaker.com/"
-# list_of_projects = util_project.projects_names_parser.get_list_of_projects(url)
-# for item in list_of_projects:
-#     print(util_project.transformer.get_url_from_project_name(item, url))
+our_list = util_project.projects_names_parser.get_projects_as_objects(url)
 
-list_of_url_projects = util_project.projects_names_parser.get_projects_as_objects(url)
+df = pd.DataFrame(columns=['name', 'ticket', 'url'])
 
-# test_url = "https://daomaker.com/"
+for project in our_list:
+    df = df.append(project.get_series(), ignore_index=True)
 
-# json = util_project.json_parser_bs4.get_json(test_url)
-# print(util_project.json_parser.get_first_ticket(json))
+print(df.shape)
 
 
-# result = util_project.json_parser.get_list_tickets(json)
-# print(result)
-
-
-# json = util_project.json_parser.get_json(url)
-# ticket = util_project.json_parser.get_first_ticket(json)
-# print(f"Ticket: {ticket}")
-
-
+# test_unit = util_project.json_parser_bs4.get_json("https://daomaker.com/company/bbs-network")
+# print(test_unit)

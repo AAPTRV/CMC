@@ -1,3 +1,5 @@
+import pandas as pd
+
 
 class Project(object):
 
@@ -14,4 +16,10 @@ class Project(object):
 
     def get_ticket(self):
         return self.ticket
+
+    def get_series(self):
+        return pd.Series({"name":   self.get_name(),
+                          "ticket": self.get_ticket(),
+                          "url":    self.get_url()})
+
 
