@@ -44,7 +44,7 @@ def get_projects_as_objects(url):
             print("Ticket OK!")
             print(ticket + "\n")
 
-            result_list.append(Project(name=name, url=url, ticket=ticket))
+            result_list.append(Project(name=name, url=ticket_url, ticket=ticket))
             print("Result list length is: " + str(len(result_list)))
 
     except Exception as ex:
