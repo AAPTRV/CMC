@@ -47,6 +47,6 @@ def transform_slug_json_into_dict(json):
             elif "Key MetricsTicker" in table:
                 ticker = table["Key MetricsTicker"]
 
-    return {'ticker: ': ticker,
-            'name: ': name,
-            'personal_allocation: ': personal_allocation}
+    return {'ticker': ticker,
+            'name': name,
+            'personal_allocation': personal_allocation}
