@@ -1,30 +1,22 @@
-import util_project.projects_names_parser
-import util_project.json_parser
-import util_project.json_parser_bs4
+import parsing_scripts.parsing_tools.daomaker.json_parser_bs4
 import util_project.transformer
-import API.coingecko.coingecko_parsing as cg
-from API.coingecko import coingecko_api
-import json
-import urllib.request
-import pandas as pd
-from classes.Project import Project
+import parsing_scripts.parsing_tools.coingecko.coingecko_parsing as cg
+
 result = []
 page = 1
-test_unit = util_project.json_parser_bs4.get_json_funded_companies_page(page)
+test_unit = parsing_scripts.parsing_tools.daomaker.json_parser_bs4.get_json_funded_companies_page(page)
 
 while len(test_unit) != 0:
-# while page == 3:
-    print(f"PARSING NUMBER {page}")
 
     for project in test_unit:
-        slug_json = util_project.json_parser_bs4.get_json_from_slug(project["slug"])
+        slug_json = parsing_scripts.parsing_tools.daomaker.json_parser_bs4.get_json_from_slug(project["slug"])
         print(slug_json["data_table1"])
         company_dict = util_project.transformer.transform_slug_json_into_dict(slug_json)
         result.append(company_dict)
 
     print("**************\n")
     page += 1
-    test_unit = util_project.json_parser_bs4.get_json_funded_companies_page(page)
+    test_unit = parsing_scripts.parsing_tools.daomaker.json_parser_bs4.get_json_funded_companies_page(page)
 
 print("---------------------------------")
 
