@@ -13,7 +13,7 @@ page = 1
 test_unit = util_project.json_parser_bs4.get_json_funded_companies_page(page)
 
 while len(test_unit) != 0:
-# while len(test_unit) == 10:
+# while page == 3:
     print(f"PARSING NUMBER {page}")
 
     for project in test_unit:
@@ -39,7 +39,6 @@ for project in result:
     coingecko_id_numerical = 'default'
 
     if coingecko_id != "default" and type(coingecko_id) is not None:
-        print(f'LOG D CG_ID = {coingecko_id}')
         coingecko_id_numerical = cg.get_token_numerical_id(coingecko_id)
 
     print(f"Name: {name}")

@@ -6,6 +6,7 @@ scraper = cloudscraper.create_scraper()
 
 
 def get_token_numerical_id(slug_value):
+    print(f'SLUG VALUE: {slug_value}')
     page_text = scraper.get(BASE_URL + slug_value).text
     soup = BeautifulSoup(page_text, "html.parser")
     result = soup.findAll('span', {"class": "no-wrap"})

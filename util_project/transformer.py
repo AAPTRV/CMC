@@ -29,6 +29,8 @@ def transform_slug_json_into_dict(json):
         slug = json["slug"]
     if "coingecko_tokenId" in json:
         coingecko_token_id = json["coingecko_tokenId"]
+        if coingecko_token_id is None:
+            coingecko_token_id = 'default'
 
     for table in json['data_table1']:
         if personal_allocation == personal_allocation_default:
