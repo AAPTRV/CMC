@@ -5,6 +5,7 @@ import pandas as pd
 
 url = 'https://daomaker.com/'
 
+
 def get_data_from_dao():
     print('dao maker parsing script processing ...')
 

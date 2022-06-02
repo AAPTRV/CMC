@@ -1,6 +1,8 @@
 import json
 import urllib.request
 import pandas as pd
+from bs4 import BeautifulSoup
+import cloudscraper
 
 
 def get_coin_list():
