@@ -13,10 +13,10 @@ def get_url_from_project_name(name, base_url):
 def transform_slug_json_into_dict(json):
 
     name_default = "No name found through transform function"
-    slug_default = "default slug"
+    slug_default = "default"
     ticker_default = "No ticket found through transform function"
     personal_allocation_default = "No personal allocation found through transform function"
-    coingecko_token_id = 'No ID found'
+    coingecko_token_id = 'default'
 
     name = name_default
     slug = slug_default

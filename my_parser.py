@@ -2,6 +2,7 @@ import util_project.projects_names_parser
 import util_project.json_parser
 import util_project.json_parser_bs4
 import util_project.transformer
+import API.coingecko.coingecko_parsing as cg
 from API.coingecko import coingecko_api
 import json
 import urllib.request
@@ -33,12 +34,21 @@ for project in result:
     personal_allocation = project["personal_allocation"]
     slug = project["slug"]
     coingecko_id = project["coingecko_id"]
+    if type(coingecko_id) is None:
+        coingecko_id = 'default'
+    coingecko_id_numerical = 'default'
+
+    if coingecko_id != "default" and type(coingecko_id) is not None:
+        print(f'LOG D CG_ID = {coingecko_id}')
+        coingecko_id_numerical = cg.get_token_numerical_id(coingecko_id)
 
     print(f"Name: {name}")
     print(f"Goingecko ID: {coingecko_id}")
+    print(f"Coingecko numerical ID: {coingecko_id_numerical}")
     print(f"Slug: {slug}")
     print(f"Ticker: {ticker}")
     print(f"Personal allocation: {personal_allocation}")
+
     print("***")
 
 
