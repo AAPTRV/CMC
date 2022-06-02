@@ -1,4 +1,9 @@
 
+CONST_TICKERS = ['Ticker:', 'Ticker', 'Key MetricsTicker']
+CONST_ALLOCATIONS = ["Personal Allocation:", "Individual Allocation:",
+                     "Individual Allocation: ", "DAO SHO Individual Allocation:",
+                     "DAO SHO Personal Allocation: ", "Allocation:", "Personal Allocation (Round 2):",
+                     "Hardcap (SHO):", "Personal Cap (SHO)"]
 
 def get_url_from_project_name(name, base_url):
     #TODO write in RegEx
@@ -8,45 +13,38 @@ def get_url_from_project_name(name, base_url):
 def transform_slug_json_into_dict(json):
 
     name_default = "No name found through transform function"
+    slug_default = "default slug"
     ticker_default = "No ticket found through transform function"
     personal_allocation_default = "No personal allocation found through transform function"
+    coingecko_token_id = 'No ID found'
 
     name = name_default
+    slug = slug_default
     ticker = ticker_default
     personal_allocation = personal_allocation_default
 
     if "title" in json:
         name = json["title"]
+    if "slug" in json:
+        slug = json["slug"]
+    if "coingecko_tokenId" in json:
+        coingecko_token_id = json["coingecko_tokenId"]
 
-    for table in json:
+    for table in json['data_table1']:
         if personal_allocation == personal_allocation_default:
-            if "Personal Allocation:" in table:
-                personal_allocation = table["Personal Allocation"]
-            elif "Individual Allocation:" in table:
-                personal_allocation = table["Individual Allocation"]
-            elif "Individual Allocation: " in table:
-                personal_allocation = table["Individual Allocation "]
-            elif "DAO SHO Individual Allocation:" in table:
-                personal_allocation = table["DAO SHO Individual Allocation:"]
-            elif "DAO SHO Personal Allocation: " in table:
-                personal_allocation = table["DAO SHO Personal Allocation: "]
-            elif "Allocation:" in table:
-                personal_allocation = table["Individual Allocation"]
-            elif "Personal Allocation (Round 2):" in table:
-                personal_allocation = table["Personal Allocation (Round 2):"]
-            elif "Hardcap (SHO):" in table:
-                personal_allocation = table["Hardcap (SHO):"]
-            elif "'Personal Cap (SHO)'" in table:
-                personal_allocation = table["Personal Cap (SHO)"]
+            for item in CONST_ALLOCATIONS:
+                if item in table.values():
+                    personal_allocation = table["value"]
+                    break
 
         if ticker == ticker_default:
-            if "Ticker:" in table:
-                ticker = table["Ticket"]
-            elif "Ticker" in table:
-                ticker = table["Ticker"]
-            elif "Key MetricsTicker" in table:
-                ticker = table["Key MetricsTicker"]
+            for item in CONST_TICKERS:
+                if item in table.values():
+                    ticker = table["value"]
+                    break
 
     return {'ticker': ticker,
             'name': name,
-            'personal_allocation': personal_allocation}
+            'personal_allocation': personal_allocation,
+            'slug': slug,
+            'coingecko_id': coingecko_token_id}
