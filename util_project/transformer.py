@@ -17,12 +17,18 @@ def transform_slug_json_into_dict(json):
     ticker_default = "No ticket found through transform function"
     personal_allocation_default = "No personal allocation found through transform function"
     coingecko_token_id = 'default'
+    platform_raise_default = 'default'
+    pre_listing_price_default = 'default'
 
     name = name_default
     slug = slug_default
     ticker = ticker_default
     personal_allocation = personal_allocation_default
+    platform_raise = platform_raise_default
+    pre_listing_price = pre_listing_price_default
 
+    if "platform_raise" in json:
+        platform_raise = json["platform_raise"]
     if "title" in json:
         name = json["title"]
     if "slug" in json:
@@ -31,6 +37,10 @@ def transform_slug_json_into_dict(json):
         coingecko_token_id = json["coingecko_tokenId"]
         if coingecko_token_id is None:
             coingecko_token_id = 'default'
+
+    if "offerings" in json:
+        if len(json["offerings"]) != 0:
+            pre_listing_price = json["offerings"][0]["price_per_token"]
 
     for table in json['data_table1']:
         if personal_allocation == personal_allocation_default:
@@ -49,4 +59,7 @@ def transform_slug_json_into_dict(json):
             'name': name,
             'personal_allocation': personal_allocation,
             'slug': slug,
-            'coingecko_id': coingecko_token_id}
+            'platform_raise': platform_raise,
+            'coingecko_id': coingecko_token_id,
+            'pre_listing_price': pre_listing_price}
+

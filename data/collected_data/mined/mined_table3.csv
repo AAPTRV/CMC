@@ -1,0 +1,99 @@
+,name,ticker,platform_raise,coingecko_id,coingecko_numerical_id,tge_date
+0,Gamium,GMM,200000,gamium,22749,2022-03
+1,ChainPort,PORTX,4000000,chainport,no-id,
+2,AdaSwap,ASW,195000,adaswap,24453,2022-04
+3,Step.app,FITFI,2750000,step-app-fitfi,25015,2022-04
+4,DragonSB,SB,195000,dragonsb,23738,2022-03
+5,DeFiato,DFIAT,600000,defiato,13386,2020-12
+6,Spellfire,SPELLFIRE,245000,spellfire,23107,2022-01
+7,BBS Network,BBS,550000,bbs-network,23715,2022-02
+8,Hubble,"$HBB, $USDH",1500000,hubble,22070,2022-01
+9,Fantom Maker,FAME,95000,fantom-maker,24086,2022-03
+10,Infinity Skies,ISKY,200000,infinity-skies,22583,2022-01
+11,Ftribe Fighters,F2C,95000,ftribe-fighters,22250,2022-01
+12,Meta Gaming Guild,No ticket found through transform function,195000,metagaming-guild,23287,2022-02
+13,MetaGods,MGOD,95000,metagods,21666,2021-12
+14,Forward Protocol,FORWARD,95000,forward,no-id,
+15,WAM,WAM,280000,wam,21576,2021-12
+16,Solice,SLC,95000,solice,22115,2022-01
+17,KingdomX,KT,115000,kingdomx,23411,2022-02
+18,1Sol,No ticket found through transform function,147000,1sol,21615,2021-12
+19,Prometheus,MGA,245000,metagame-arena,20947,2021-11
+20,Street Runner,SRG,230000,default,default,
+21,Symbiosis Finance,SIS,435000,symbiosis-finance,20805,2021-12
+22,Meta Soccer,MSU,295000,metasoccer,21670,2021-12
+23,ShopNEXT,NEXT,130000,shopnext,21116,2021-12
+24,BitLocus,BTL,145000,bitlocus,20913,2021-12
+25,Titan Hunters,TITA,95000,titan-hunters,20588,2021-11
+26,KAKA NFT,KAKA,145000,kaka-nft-world,20877,2021-11
+27,Victoria VR,VR,100000,victoria-vr,21178,2021-12
+28,Bemil Coin,BEM,95000,bemil-coin,20896,2021-11
+29,Polygonum Online,POG,115000,pog-coin,21053,2021-11
+30,Blockasset,BLOCK,105000,blockasset,21332,2021-12
+31,YIN Finance,YIN,235000,yin-finance,18272,2021-11
+32,Resource Finance,SOURCE,1220000,resource-protocol,20740,2021-11
+33,Numbers Protocol,NUM,1195000,numbers-protocol,20495,2021-11
+34,Demole,DMLG,95000,demole,19195,2021-10
+35,Clearpool,CPOOL,95000,clearpool,19252,2021-10
+36,Envoy,ENV,125000,envoy-network,19631,2021-11
+37,Warena,RENA,95000,warena,18888,2021-10
+38,Three Kingdoms,TTK,175000,the-three-kingdoms,18948,2021-10
+39,Dark Frontiers,No ticket found through transform function,120000,dark-frontiers,18856,2021-10
+40,Heroes & Empires,HE,120000,heroes-empires,18903,2021-10
+41,Orion Money,ORION,445000,orion-money,18630,2021-09
+42,NFTrade,NFTD,495000,nftrade,18578,2021-09
+43,GameFi,GAFI,95000,gamefi,18292,2021-09
+44,Snook,SNK,195000,snook,18197,2021-09
+45,Kaby Arena,KABY,95000,kaby-arena,18090,2021-08
+46,Marnotaur,TAUR,100000,marnotaur,18655,2021-10
+47,Chronicle,XNL,275000,chronicle,18413,2021-09
+48,Brokoli,BRKL,300000,brokoli,18763,2021-10
+49,Coinspaid,CPD,95000,coinspaid,18092,2021-08
+50,DinoX,DNXC,200000,dinox,17321,2021-07
+51,DeRace,DERC,355000,derace,17438,2021-08
+52,Vent Finance,VENT,168000,vent-finance,17925,2021-09
+53,Infinity Pad,IPAD,100000,infinity-pad,17302,2021-07
+54,Opulous,OPUL,1000000,opulous,16548,2021-09
+55,Formation Fi,FORM,200000,formation-fi,16145,2021-06
+56,Gamestarter,GAME,335000,gamestarter,17604,2021-08
+57,Pera Finance,PERA,245000,pera-finance,16185,2021-07
+58,OpenOcean,OOE,100000,openocean,17014,2021-07
+59,delta.theta,DLTA,300000,delta-theta,15697,2021-07
+60,Lossless Protocol,LSS,250000,lossless,15917,2021-06
+61,Ternoa,CAPS,150000,coin-capsule,15921,2021-05
+62,Spherium,SPHRI,190000,spherium,17787,2021-08
+63,LaunchX,LNCHX,170000,launchx,15494,2021-05
+64,Gold Fever,NGL,105000,gold-fever-native-gold,20633,2021-11
+65,Knit Finance,KFT,145000,knit-finance,15632,2021-09
+66,Fear,FEAR,95000,fear,15825,2021-05
+67,IOI,No ticket found through transform function,200000,ioi-token,15952,2021-06
+68,EPIK Prime,EPIK,180000,epik-prime,17907,2021-08
+69,Lever Network,LEV,100000,lever-network,15323,2021-05
+70,XCAD Network,XCAD,750000,xcad-network,15857,2021-05
+71,MakiSwap,MAKI,100000,makiswap,16051,2021-06
+72,Ispolink,ISP,100000,ispolink,15283,2021-05
+73,Sienna,SIENNA / wSIENNA,800000,sienna,15196,2021-09
+74,Legends Of Crypto,LOCG,156000,locgame,15175,2021-05
+75,Crypto Prophecies,TCP,165000,the-crypto-prophecies,15054,2021-04
+76,Smoothy Finance,SMTY,195000,smoothy,15039,2021-04
+77,MOCHI,MOMA,95000,mochi-market,14993,2021-04
+78,Hord,HORD,145000,hord,14972,2021-04
+79,Showcase,SHO,195000,showcase-token,15084,2021-04
+80,Cere Network,CERE,1000000,cere-network,20008,2021-11
+81,Crowny,CRWNY,145000,crowny-token,14958,2021-04
+82,Alphr,ALPHR,150000,alphr,15029,2021-04
+83,ORAO,ORAO,850000,orao-network,15189,2021-05
+84,HAPI,HAPI,100000,hapi,14298,2021-03
+85,Aluna Social,ALN,300000,aluna,14379,2021-03
+86,Dafi Protocol,DAFI,150000,dafi-protocol,14428,2021-03
+87,Yield Protocol,YIELD,165000,yield-protocol,14220,2021-03
+88,Xend Finance,XEND,100000,xend-finance,14496,2021-03
+89,VAIOT,VAI,250000,vaiot,13981,2021-02
+90,My Neighbor Alice,ALICE,100000,my-neighbor-alice,14375,2021-03
+91,Seascape,CWS,60000,crowns,13835,2021-02
+92,DAO Maker,DAO,3900000,dao-maker,13915,2021-02
+93,AnRKey X™,ANRX,125000,anrkey-x,13415,2020-12
+94,PlotX,No ticket found through transform function,250000,plotx,12795,2020-10
+95,DeFiner,No ticket found through transform function,96000,definer,12780,2020-10
+96,OpenPredict,No ticket found through transform function,250000,open-predict-token,no-id,
+97,Orion Protocol,No ticket found through transform function,3750000,orion-protocol,11841,2020-07

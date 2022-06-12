@@ -1,19 +1,16 @@
 import pandas as pd
-import numpy as np
-import parsing_scripts.scripts.daomaker as dm
 import parsing_scripts.parsing_tools.coingecko.coingecko_listing as cg
-from datetime import datetime
 
-df = pd.read_csv('/Users/eaxes/DA Projects/CMC/data/collected_data/sample123.csv')
-print(df.head())
+dao_maker_df = pd.read_csv('/Users/eaxes/DA Projects/CMC/data/collected_data/sample123.csv')
 
-id = df.iloc[0]['coingecko_numerical_id']
+df_values = pd.DataFrame(columns=['coingecko_numerical_id', 'date', 'value'])
 
-dict = cg.get_coin_chart(id)
-for item in dict['stats']:
-    item_date = datetime.utcfromtimestamp(item[0]/1000).strftime('%Y-%m-%d %H:%M')
-    print(f"date:{item_date}")
-    print(f"value:{item[1]}")
-    print('***')
+for index, row in dao_maker_df.iterrows():
+    coin_numerical_id = row['coingecko_numerical_id']
 
+    if coin_numerical_id not in ['no-id', 'default']:
+        print(row['coingecko_numerical_id'])
+        result = cg.get_coin_chart_dataframe(coin_numerical_id)
+        df_values = df_values.append(result, ignore_index=True)
 
+df_values.to_csv('/Users/eaxes/DA Projects/CMC/data/collected_data/coins_date_and_values')
