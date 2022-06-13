@@ -1,3 +1,4 @@
+import data.collected_data.methods.get_listing_median_price as gt
 
 CONST_TICKERS = ['Ticker:', 'Ticker', 'Key MetricsTicker']
 CONST_ALLOCATIONS = ["Personal Allocation:", "Individual Allocation:",
@@ -9,6 +10,7 @@ def get_url_from_project_name(name, base_url):
     #TODO write in RegEx
     result = name.replace(" ", "-").replace(".", "-")
     return base_url + f"{result}"
+
 
 def transform_slug_json_into_dict(json):
 

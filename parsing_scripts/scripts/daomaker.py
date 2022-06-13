@@ -2,7 +2,9 @@ import parsing_scripts.parsing_tools.daomaker.json_parser_bs4
 import util_project.transformer
 import parsing_scripts.parsing_tools.coingecko.coingecko_parsing as cg
 import pandas as pd
+import data.collected_data.methods.get_listing_median_price as gt
 
+path_to_table = "/Users/eaxes/DA Projects/CMC/data/collected_data/coins_date_and_values"
 url = 'https://daomaker.com/'
 
 
@@ -50,6 +52,20 @@ def get_data_from_dao():
 
     return df
 
+
+def get_ath_array(doubled_array):
+    result_list = []
+    i = 0
+    j = 0
+    while(i < len(doubled_array[0])):
+        if doubled_array[0][i] != 'default' and doubled_array[1][j] != 'no-price':
+            result_list.append(float(doubled_array[1][j]) / float(doubled_array[0][i]))
+        else: result_list.append('no-ath')
+        i += 1
+        j += 1
+    return result_list
+
+
 def get_data_from_dao_with_median():
     print('dao maker parsing script processing ...')
 
@@ -96,7 +112,17 @@ def get_data_from_dao_with_median():
                         'sho_price': sho_price})
         df = df.append(s1, ignore_index=True)
 
+    list_item = df['coingecko_numerical_id'].values
+    median_list = gt.coin_id_list_to_median_price(list_item, 1)
+    df['median_listing_sell_price'] = pd.Series(median_list)
+    sho_list = df['sho_price'].values
+    sho_median_array = [sho_list, median_list]
+    test_list = get_ath_array(sho_median_array)
+    df['ath_median_listing'] = pd.Series(test_list)
+
     return df
+
+
 
 # get_data_from_dao().to_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/mined_table2.csv")
 get_data_from_dao_with_median().to_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/price_token_test.csv")
