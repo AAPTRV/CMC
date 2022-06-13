@@ -1,4 +1,5 @@
 import data.collected_data.methods.get_listing_median_price as gt
+import parsing_scripts.parsing_tools.daomaker.json_parser_bs4 as js
 
 CONST_TICKERS = ['Ticker:', 'Ticker', 'Key MetricsTicker']
 CONST_ALLOCATIONS = ["Personal Allocation:", "Individual Allocation:",
@@ -43,6 +44,9 @@ def transform_slug_json_into_dict(json):
     if "offerings" in json:
         if len(json["offerings"]) != 0:
             pre_listing_price = json["offerings"][0]["price_per_token"]
+        else:
+            if slug != "default":
+                pre_listing_price = js.get_token_presale_price(slug)
 
     for table in json['data_table1']:
         if personal_allocation == personal_allocation_default:

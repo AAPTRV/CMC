@@ -119,6 +119,7 @@ def get_data_from_dao_with_median():
     sho_median_array = [sho_list, median_list]
     test_list = get_ath_array(sho_median_array)
     df['ath_median_listing'] = pd.Series(test_list)
+    df['for_charts'] = (df.median_listing_sell_price != 'no-price') & (df.ath_median_listing != 'no-ath')
 
     return df
 
