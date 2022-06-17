@@ -105,6 +105,7 @@ def get_data_from_dao_with_median():
             coingecko_id_numerical = cg.get_token_numerical_id(coingecko_id)
 
         s1 = pd.Series({'name': name,
+                        'slug': slug,
                         'ticker': ticker,
                         'platform_raise': platform_raise,
                         'coingecko_id': coingecko_id,
