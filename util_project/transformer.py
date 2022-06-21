@@ -1,11 +1,13 @@
 import data.collected_data.methods.get_listing_median_price as gt
 import parsing_scripts.parsing_tools.daomaker.json_parser_bs4 as js
+import re
 
 CONST_TICKERS = ['Ticker:', 'Ticker', 'Key MetricsTicker']
 CONST_ALLOCATIONS = ["Personal Allocation:", "Individual Allocation:",
                      "Individual Allocation: ", "DAO SHO Individual Allocation:",
                      "DAO SHO Personal Allocation: ", "Allocation:", "Personal Allocation (Round 2):",
                      "Hardcap (SHO):", "Personal Cap (SHO)"]
+
 
 def get_url_from_project_name(name, base_url):
     #TODO write in RegEx
@@ -30,12 +32,15 @@ def transform_slug_json_into_dict(json):
     platform_raise = platform_raise_default
     pre_listing_price = pre_listing_price_default
 
+
     if "platform_raise" in json:
         platform_raise = json["platform_raise"]
     if "title" in json:
         name = json["title"]
     if "slug" in json:
         slug = json["slug"]
+    if slug != 'default':
+        personal_allocation = js.get_token_personal_cap(slug)
     if "coingecko_tokenId" in json:
         coingecko_token_id = json["coingecko_tokenId"]
         if coingecko_token_id is None:
@@ -49,17 +54,13 @@ def transform_slug_json_into_dict(json):
                 pre_listing_price = js.get_token_presale_price(slug)
 
     for table in json['data_table1']:
-        if personal_allocation == personal_allocation_default:
-            for item in CONST_ALLOCATIONS:
-                if item in table.values():
-                    personal_allocation = table["value"]
-                    break
 
         if ticker == ticker_default:
             for item in CONST_TICKERS:
                 if item in table.values():
                     ticker = table["value"]
                     break
+
 
     return {'ticker': ticker,
             'name': name,

@@ -3,6 +3,7 @@ import util_project.transformer
 import parsing_scripts.parsing_tools.coingecko.coingecko_parsing as cg
 import pandas as pd
 import data.collected_data.methods.get_listing_median_price as gt
+import numpy as np
 
 path_to_table = "/Users/eaxes/DA Projects/CMC/data/collected_data/coins_date_and_values"
 url = 'https://daomaker.com/'
@@ -11,7 +12,8 @@ url = 'https://daomaker.com/'
 def get_data_from_dao():
     print('dao maker parsing script processing ...')
 
-    df = pd.DataFrame(columns=['name', 'ticker', 'platform_raise','coingecko_id', 'coingecko_numerical_id'])
+    df = pd.DataFrame(columns=['name', 'ticker', 'platform_raise','coingecko_id',
+                               'coingecko_numerical_id', 'personal_allocation'])
     page = 1
     result_of_parsing = []
     parser_unit = parsing_scripts.parsing_tools.daomaker.json_parser_bs4.get_json_funded_companies_page(page)
@@ -65,6 +67,15 @@ def get_ath_array(doubled_array):
         j += 1
     return result_list
 
+def get_token_cap(allocation, price):
+    result = []
+    for i in range(len(allocation)):
+        if allocation[i] != 'default':
+            result.append(np.round(float(allocation[i]) / float(price[i]), 0))
+        else:
+            result.append('default')
+
+    return pd.Series(result)
 
 def get_data_from_dao_with_median():
     print('dao maker parsing script processing ...')
@@ -110,17 +121,20 @@ def get_data_from_dao_with_median():
                         'platform_raise': platform_raise,
                         'coingecko_id': coingecko_id,
                         'coingecko_numerical_id': coingecko_id_numerical,
-                        'sho_price': sho_price})
+                        'sho_price': sho_price,
+                        'personal_allocation': personal_allocation})
         df = df.append(s1, ignore_index=True)
 
     list_item = df['coingecko_numerical_id'].values
     median_list = gt.coin_id_list_to_median_price(list_item, 1)
     df['median_listing_sell_price'] = pd.Series(median_list)
     sho_list = df['sho_price'].values
+    df['token_personal_cap'] = get_token_cap(df.personal_allocation, df.sho_price)
     sho_median_array = [sho_list, median_list]
     test_list = get_ath_array(sho_median_array)
     df['ath_median_listing'] = pd.Series(test_list)
     df['for_charts'] = (df.median_listing_sell_price != 'no-price') & (df.ath_median_listing != 'no-ath')
+
 
     return df
 
