@@ -124,5 +124,7 @@ def get_token_eco_df(slug, coingecko_numerical_id):
         result_df = result_df.append(series, ignore_index=True)
     return result_df
 
-print(get_token_eco_df(123,123))
+df_test = pd.read_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/price_token_test.csv")
+array_test = df_test.slug.values
+print(array_test)
 

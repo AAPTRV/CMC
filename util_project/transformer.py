@@ -84,7 +84,6 @@ def transform_slug_json_into_dict(json):
     platform_raise = platform_raise_default
     pre_listing_price = pre_listing_price_default
     schedule = schedule_default
-
     schedule = get_schedule(json)
 
     if "platform_raise" in json:
