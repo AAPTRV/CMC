@@ -107,6 +107,7 @@ def get_data_from_dao_with_median():
         platform_raise = project["platform_raise"]
         coingecko_id = project["coingecko_id"]
         sho_price = project["pre_listing_price"]
+        schedule = project["schedule"]
         print("at least one time that was correct")
 
         if type(coingecko_id) is None:
@@ -123,7 +124,8 @@ def get_data_from_dao_with_median():
                         'coingecko_id': coingecko_id,
                         'coingecko_numerical_id': coingecko_id_numerical,
                         'sho_price': sho_price,
-                        'personal_allocation': personal_allocation})
+                        'personal_allocation': personal_allocation,
+                        'schedule': schedule})
         df = df.append(s1, ignore_index=True)
 
     list_item = df['coingecko_numerical_id'].values

@@ -56,7 +56,3 @@ def get_median_price_at_date(hours, path_to_values, coingecko_id, date64):
     df_values = df_values.query("date < @border_right and date > @date64")
     return df_values.value.median()
 
-
-
-get_median_price_at_date(1, path_to_values, 18292 , 1)
-

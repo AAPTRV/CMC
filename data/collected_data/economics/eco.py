@@ -12,9 +12,41 @@ import data.collected_data.economics.schedule as sch
 sns.set(rc={'figure.figsize': (15, 10)},
         style="whitegrid", font_scale= 0.8)
 
+token_names = ['public presale', 'public round', 'public sale', 'dao public sale',
+               'sho', 'launchpad', 'public', 'public sale / sho',
+               'public round daomaker', 'idos, sho, early supporters',
+               'seed sho', 'dao maker / platform raise sho', 'public sale price',
+               'private round (including seed sho)', 'public sho', 'public sale (sho)',
+               'public round ido', 'sale', 'public round 2 (sho)', 'community offering (sho)',
+               'public sale - sho']
+
+token_names_low_priority = ['pre seed', 'seed round']
+
+exceptions_slugs = ['yin-finance', 'coinspaid', 'opulous', 'maki-swap', 'alphr', 'orao-network',
+                    'plotx', 'definer', 'openpredict', 'orion-protocol', 'hubble', 'infinity-pad']
+
 path_to_values = '/Users/eaxes/DA Projects/CMC/data/collected_data/coins_date_and_values'
 base_df_path = "/Users/eaxes/DA Projects/CMC/data/collected_data/mined/price_token_test.csv"
 values_df_path = '/Users/eaxes/DA Projects/CMC/data/collected_data/coins_date_and_values'
+
+def get_schedule(token_json):
+    print("***")
+    str_result = ""
+    if token_json["slug"] in exceptions_slugs:
+        return "slug is in exception list \n"
+    if 'vesting_data' in token_json:
+        if 'tokenData' in token_json['vesting_data']:
+            vesting_item = token_json['vesting_data']
+            for item in token_json['vesting_data']['tokenData']:
+                item_data = item
+                if 'tokenDescription' in item and 'tokenName' in item:
+                    if item['tokenName'].lower().strip() in token_names:
+                        return f"{item['tokenName']}:{item['tokenDescription']}\n"
+                    if item['tokenName'].lower().strip() in token_names_low_priority:
+                        return f"{item['tokenName']}:{item['tokenDescription']}\n"
+        return 'no token description found'
+    else:
+        return 'no token description found'
 
 
 def get_median_price_at_date(hours, path_to_values, coingecko_id, date64):

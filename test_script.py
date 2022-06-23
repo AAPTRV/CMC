@@ -3,12 +3,13 @@ import urllib.request
 import json
 
 token_names = ['public presale', 'public round', 'public sale', 'dao public sale',
-               'sho', 'launchpad', 'public', 'public sale / sho', 'pre seed',
-               'public round daomaker', 'idos, sho, early supporters', 'seed round',
+               'sho', 'launchpad', 'public', 'public sale / sho',
+               'public round daomaker', 'idos, sho, early supporters',
                'seed sho', 'dao maker / platform raise sho', 'public sale price',
                'private round (including seed sho)', 'public sho', 'public sale (sho)',
                'public round ido', 'sale', 'public round 2 (sho)', 'community offering (sho)',
                'public sale - sho']
+token_names_low_priority = ['pre seed', 'seed round']
 
 exceptions_slugs = ['yin-finance', 'coinspaid', 'opulous', 'maki-swap', 'alphr', 'orao-network',
                     'plotx', 'definer', 'openpredict', 'orion-protocol', 'hubble', 'infinity-pad']
@@ -74,8 +75,10 @@ def get_schedule(token_json):
                 item_data = item
                 if 'tokenDescription' in item and 'tokenName' in item:
                     if item['tokenName'].lower().strip() in token_names:
-                        str_result += f"{item['tokenName']}:{item['tokenDescription']}\n"
-        return str_result
+                        return f"{item['tokenName']}:{item['tokenDescription']}\n"
+                    if item['tokenName'].lower().strip() in token_names_low_priority:
+                        return f"{item['tokenName']}:{item['tokenDescription']}\n"
+        return 'no token description found'
     else:
         return 'no token description found'
 
