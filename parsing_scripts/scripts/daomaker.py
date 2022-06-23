@@ -4,6 +4,7 @@ import parsing_scripts.parsing_tools.coingecko.coingecko_parsing as cg
 import pandas as pd
 import data.collected_data.methods.get_listing_median_price as gt
 import numpy as np
+import re
 
 path_to_table = "/Users/eaxes/DA Projects/CMC/data/collected_data/coins_date_and_values"
 url = 'https://daomaker.com/'
@@ -142,3 +143,9 @@ def get_data_from_dao_with_median():
 
 # get_data_from_dao().to_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/mined_table2.csv")
 get_data_from_dao_with_median().to_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/price_token_test.csv")
+
+
+def str_schedule_unit_to_arr(schedule):
+    schedule = "1a"
+    result = schedule.split(r"[a-z]")
+    print(result)
