@@ -278,6 +278,7 @@ schedule = {
                                                                     [f"1{month}", 0.05],  # linear vesting (24)
                                                                     [f"1{month}", 0.05],  # linear vesting (25)
                                                                     [f"1{month}", 0.05]],  # linear vesting (26)
+
     "Public:20% at TGE,  120 days cliff then 20% quarterly":  [["0", 0.2],
                                                                     [f"3{month}", 0.2],  # linear vesting (1)
                                                                     [f"3{month}", 0.2],  # linear vesting (2)
@@ -483,6 +484,502 @@ schedule = {
                                                                     [f"3{month}", 0.2],  # linear vesting (3)
                                                                     [f"3{month}", 0.2]],  # linear vesting (4)
 
+    "Seed round:16% on TGE. 3 months cliff, thereafter 4% on a monthly basis": [["0", 0.16],
+                                                                    [f"3{month}", 0.04],  # linear vesting (1)
+                                                                    [f"3{month}", 0.04],  # linear vesting (2)
+                                                                    [f"3{month}", 0.04],  # linear vesting (3)
+                                                                    [f"3{month}", 0.04],  # linear vesting (4)
+                                                                    [f"3{month}", 0.04],  # linear vesting (5)
+                                                                    [f"3{month}", 0.04],  # linear vesting (6)
+                                                                    [f"3{month}", 0.04],  # linear vesting (7)
+                                                                    [f"3{month}", 0.04],  # linear vesting (8)
+                                                                    [f"3{month}", 0.04],  # linear vesting (9)
+                                                                    [f"3{month}", 0.04],  # linear vesting (10)
+                                                                    [f"3{month}", 0.04],  # linear vesting (11)
+                                                                    [f"3{month}", 0.04],  # linear vesting (12)
+                                                                    [f"3{month}", 0.04],  # linear vesting (13)
+                                                                    [f"3{month}", 0.04],  # linear vesting (14)
+                                                                    [f"3{month}", 0.04],  # linear vesting (15)
+                                                                    [f"3{month}", 0.04],  # linear vesting (16)
+                                                                    [f"3{month}", 0.04],  # linear vesting (17)
+                                                                    [f"3{month}", 0.04],  # linear vesting (18)
+                                                                    [f"3{month}", 0.04],  # linear vesting (19)
+                                                                    [f"3{month}", 0.04],  # linear vesting (20)
+                                                                    [f"3{month}", 0.04]],  # linear vesting (21)
+
+    "Public Sale:50% unlock at TGE and 50% after six months": [["0", 0.5],
+                                                                    [f"6{month}", 0.5]],  # linear vesting (1)
+
+    "Public Round:100% unlocked at the TGE":                  [["0", 1]],
+
+    "Public:30% unlocked on TGE, then 35% on a quarterly basis": [["0", 0.3],
+                                                                    [f"3{month}", 0.35],  # linear vesting (1)
+                                                                    [f"3{month}", 0.35]],  # linear vesting (2)
+
+    "Seed Round:7% unlocked on TGE, 6 month cliff, 12 months daily": [["0", 0.07],
+                                                                    [f"6{month}", 0.075],  # linear vesting (1)
+                                                                    [f"1{month}", 0.075],  # linear vesting (2)
+                                                                    [f"1{month}", 0.075],  # linear vesting (3)
+                                                                    [f"1{month}", 0.075],  # linear vesting (4)
+                                                                    [f"1{month}", 0.075],  # linear vesting (5)
+                                                                    [f"1{month}", 0.075],  # linear vesting (6)
+                                                                    [f"1{month}", 0.075],  # linear vesting (7)
+                                                                    [f"1{month}", 0.075],  # linear vesting (8)
+                                                                    [f"1{month}", 0.075],  # linear vesting (9)
+                                                                    [f"1{month}", 0.075],  # linear vesting (10)
+                                                                    [f"1{month}", 0.075],  # linear vesting (11)
+                                                                    [f"1{month}", 0.075]], # linear vesting (12)
+
+    "Public Sale:20% unlocked on TGE, 3 months cliff, then 5% on a monthly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.05],  # linear vesting (1)
+                                                                    [f"1{month}", 0.05],  # linear vesting (2)
+                                                                    [f"1{month}", 0.05],  # linear vesting (3)
+                                                                    [f"1{month}", 0.05],  # linear vesting (4)
+                                                                    [f"1{month}", 0.05],  # linear vesting (5)
+                                                                    [f"1{month}", 0.05],  # linear vesting (6)
+                                                                    [f"1{month}", 0.05],  # linear vesting (7)
+                                                                    [f"1{month}", 0.05],  # linear vesting (8)
+                                                                    [f"1{month}", 0.05],  # linear vesting (9)
+                                                                    [f"1{month}", 0.05],  # linear vesting (10)
+                                                                    [f"1{month}", 0.05],  # linear vesting (11)
+                                                                    [f"1{month}", 0.05],  # linear vesting (12)
+                                                                    [f"1{month}", 0.05],  # linear vesting (13)
+                                                                    [f"1{month}", 0.05],  # linear vesting (14)
+                                                                    [f"1{month}", 0.05],  # linear vesting (15)
+                                                                    [f"1{month}", 0.05]],  # linear vesting (16)
+
+    "SEED SHO:25% unlocked on TGE, 3 months cliff, then 5% on a monthly basis": [["0", 0.25],
+                                                                    [f"1{month}", 0.05],  # linear vesting (1)
+                                                                    [f"1{month}", 0.05],  # linear vesting (2)
+                                                                    [f"1{month}", 0.05],  # linear vesting (3)
+                                                                    [f"1{month}", 0.05],  # linear vesting (4)
+                                                                    [f"1{month}", 0.05],  # linear vesting (5)
+                                                                    [f"1{month}", 0.05],  # linear vesting (6)
+                                                                    [f"1{month}", 0.05],  # linear vesting (7)
+                                                                    [f"1{month}", 0.05],  # linear vesting (8)
+                                                                    [f"1{month}", 0.05],  # linear vesting (9)
+                                                                    [f"1{month}", 0.05],  # linear vesting (10)
+                                                                    [f"1{month}", 0.05],  # linear vesting (11)
+                                                                    [f"1{month}", 0.05],  # linear vesting (12)
+                                                                    [f"1{month}", 0.05],  # linear vesting (13)
+                                                                    [f"1{month}", 0.05],  # linear vesting (14)
+                                                                    [f"1{month}", 0.05]],  # linear vesting (15)
+
+    "Public:20% at TGE, 1 month cliff then 20% each month": [["0", 0.2],
+                                                                    [f"1{month}", 0.05],  # linear vesting (1)
+                                                                    [f"1{month}", 0.05],  # linear vesting (2)
+                                                                    [f"1{month}", 0.05],  # linear vesting (3)
+                                                                    [f"1{month}", 0.05]],  # linear vesting (4)
+
+
+    "Seed Round:2 months cliff, 5% the first quarter, 7.5% the second, "
+    "10% the third, 15% the fourth and fifth, 10% the following quarters "
+    "and 7.5% the last quarter":                                 [["0", 0],
+                                                                    [f"2{month}", 0.05],   # linear vesting (1)
+                                                                    [f"3{month}", 0.075],  # linear vesting (2)
+                                                                    [f"3{month}", 0.1],    # linear vesting (3)
+                                                                    [f"3{month}", 0.15],   # linear vesting (4)
+                                                                    [f"3{month}", 0.1],    # linear vesting (5)
+                                                                    [f"3{month}", 0.1],    # linear vesting (6)
+                                                                    [f"3{month}", 0.1],    # linear vesting (7)
+                                                                    [f"3{month}", 0.1],    # linear vesting (8)
+                                                                    [f"3{month}", 0.1],    # linear vesting (9)
+                                                                    [f"3{month}", 0.1],    # linear vesting (10)
+                                                                    [f"3{month}", 0.075]], # linear vesting (11)
+
+    "Seed Round:12% unlocked at the TGE, 3 months cliff, then 5,866% per month": [["0", 0.12],
+                                                                    [f"3{month}", 0.0586],  # linear vesting (1)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (2)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (3)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (4)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (5)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (6)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (7)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (8)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (9)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (10)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (11)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (12)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (13)
+                                                                    [f"1{month}", 0.0586],  # linear vesting (14)
+                                                                    [f"1{month}", 0.0586]],  # linear vesting (15)
+
+    "Seed Round:20% unlocked at the TGE, 3 months cliff, then 5% per month": [["0", 0.2],
+                                                                    [f"3{month}", 0.05],  # linear vesting (1)
+                                                                    [f"1{month}", 0.05],  # linear vesting (2)
+                                                                    [f"1{month}", 0.05],  # linear vesting (3)
+                                                                    [f"1{month}", 0.05],  # linear vesting (4)
+                                                                    [f"1{month}", 0.05],  # linear vesting (5)
+                                                                    [f"1{month}", 0.05],  # linear vesting (6)
+                                                                    [f"1{month}", 0.05],  # linear vesting (7)
+                                                                    [f"1{month}", 0.05],  # linear vesting (8)
+                                                                    [f"1{month}", 0.05],  # linear vesting (9)
+                                                                    [f"1{month}", 0.05],  # linear vesting (10)
+                                                                    [f"1{month}", 0.05],  # linear vesting (11)
+                                                                    [f"1{month}", 0.05],  # linear vesting (12)
+                                                                    [f"1{month}", 0.05],  # linear vesting (13)
+                                                                    [f"1{month}", 0.05],  # linear vesting (14)
+                                                                    [f"1{month}", 0.05],  # linear vesting (15)
+                                                                    [f"1{month}", 0.05]],  # linear vesting (16)
+
+    "Seed Round:15% at TGE, 3 months cliff, then 15% quarterly, last month 10%": [["0", 0.15],
+                                                                    [f"3{month}", 0.15],  # linear vesting (1)
+                                                                    [f"1{month}", 0.15],  # linear vesting (2)
+                                                                    [f"1{month}", 0.15],  # linear vesting (3)
+                                                                    [f"1{month}", 0.15],  # linear vesting (4)
+                                                                    [f"1{month}", 0.15],  # linear vesting (5)
+                                                                    [f"1{month}", 0.1]],  # linear vesting (6)
+
+    "Public Sale:20% unlock at TGE, 3 months cliff, then linear vesting over 15 months":[["0", 0.2],
+                                                                    [f"3{month}", 0.0533],  # linear vesting (1)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (2)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (3)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (4)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (5)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (6)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (7)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (8)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (9)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (10)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (11)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (12)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (13)
+                                                                    [f"1{month}", 0.0533],  # linear vesting (14)
+                                                                    [f"1{month}", 0.0533]],  # linear vesting (15)
+
+    "Seed SHO:20% on TGE, 3 months cliff, 4.44% monthly distribution for 18 months": [["0", 0.2],
+                                                                    [f"3{month}", 0.0444],  # linear vesting (1)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (2)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (3)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (4)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (5)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (6)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (7)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (8)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (9)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (10)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (11)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (12)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (13)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (14)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (15)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (16)
+                                                                    [f"1{month}", 0.0444],  # linear vesting (17)
+                                                                    [f"1{month}", 0.0444]],  # linear vesting (18)
+
+    "DAO Maker / Platform raise SHO:20% on TGE, 80% in a month": [["0", 0.2],
+                                                                    [f"1{month}", 0.8]],  # linear vesting (1)
+
+    "Seed Round:15% unlocked at the TGE, then 17% on a quarterly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.17],  # linear vesting (1)
+                                                                    [f"3{month}", 0.17],  # linear vesting (2)
+                                                                    [f"3{month}", 0.17],  # linear vesting (3)
+                                                                    [f"3{month}", 0.17],  # linear vesting (4)
+                                                                    [f"3{month}", 0.17]],  # linear vesting (5)
+
+    "Seed Round:0.27% unlocked at the TGE. Cliff for the 2nd & 3rd month and then daily vesting for a year":
+                                                                    [["0", 0.0027],
+                                                                    [f"3{month}", 0.0831],  # linear vesting (1)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (2)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (3)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (4)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (5)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (6)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (7)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (8)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (9)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (10)
+                                                                    [f"1{month}", 0.0831],  # linear vesting (11)
+                                                                    [f"1{month}", 0.0831]],  # linear vesting (12)
+
+    "Public Sale:20% unlocked at the TGE, then 16% on a quarterly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.16],  # linear vesting (1)
+                                                                    [f"3{month}", 0.16],  # linear vesting (2)
+                                                                    [f"3{month}", 0.16],  # linear vesting (3)
+                                                                    [f"3{month}", 0.16],  # linear vesting (4)
+                                                                    [f"3{month}", 0.16]],  # linear vesting (5)
+
+    "SHO:20% unlocked at the TGE, then 20% on a quarterly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.2],  # linear vesting (1)
+                                                                    [f"3{month}", 0.2],  # linear vesting (2)
+                                                                    [f"3{month}", 0.2],  # linear vesting (3)
+                                                                    [f"3{month}", 0.2]],  # linear vesting (4)
+
+    "Public Sale:20% unlock at TGE, then 8% on a quarterly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.08],  # linear vesting (1)
+                                                                    [f"3{month}", 0.08],  # linear vesting (2)
+                                                                    [f"3{month}", 0.08],  # linear vesting (3)
+                                                                    [f"3{month}", 0.08],  # linear vesting (4)
+                                                                    [f"3{month}", 0.08],  # linear vesting (5)
+                                                                    [f"3{month}", 0.08],  # linear vesting (6)
+                                                                    [f"3{month}", 0.08],  # linear vesting (7)
+                                                                    [f"3{month}", 0.08],  # linear vesting (8)
+                                                                    [f"3{month}", 0.08],  # linear vesting (9)
+                                                                    [f"3{month}", 0.08]],  # linear vesting (10)
+
+    "Seed Round:20% unlocked at the TGE, then 13% on a quarterly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.13],  # linear vesting (1)
+                                                                    [f"3{month}", 0.13],  # linear vesting (2)
+                                                                    [f"3{month}", 0.13],  # linear vesting (3)
+                                                                    [f"3{month}", 0.13],  # linear vesting (4)
+                                                                    [f"3{month}", 0.13],  # linear vesting (5)
+                                                                    [f"3{month}", 0.13],  # linear vesting (6)
+                                                                    [f"3{month}", 0.13]],  # linear vesting (7)
+
+    "Private Round (including SEED SHO):20% unlocked at the TGE, then 20% on a quarterly basis release": [["0", 0.2],
+                                                                    [f"3{month}", 0.2],  # linear vesting (1)
+                                                                    [f"3{month}", 0.2],  # linear vesting (2)
+                                                                    [f"3{month}", 0.2],  # linear vesting (3)
+                                                                    [f"3{month}", 0.2]],  # linear vesting (4)
+
+    "Public Sale:10% at the TGE and 10% monthly":                       [["0", 0.2],
+                                                                    [f"1{month}", 0.1],  # linear vesting (1)
+                                                                    [f"1{month}", 0.1],  # linear vesting (2)
+                                                                    [f"1{month}", 0.1],  # linear vesting (3)
+                                                                    [f"1{month}", 0.1],  # linear vesting (4)
+                                                                    [f"1{month}", 0.1],  # linear vesting (5)
+                                                                    [f"1{month}", 0.1],  # linear vesting (6)
+                                                                    [f"1{month}", 0.1],  # linear vesting (7)
+                                                                    [f"1{month}", 0.1],  # linear vesting (8)
+                                                                    [f"1{month}", 0.1]],  # linear vesting (9)
+
+    "Seed Round:10% at the TGE, then 15% on quarterly basis": [["0", 0.1],
+                                                                    [f"3{month}", 0.15],  # linear vesting (1)
+                                                                    [f"3{month}", 0.15],  # linear vesting (2)
+                                                                    [f"3{month}", 0.15],  # linear vesting (3)
+                                                                    [f"3{month}", 0.15],  # linear vesting (4)
+                                                                    [f"3{month}", 0.15],  # linear vesting (5)
+                                                                    [f"3{month}", 0.15]],  # linear vesting (6)
+
+    "Public:40% at the TGE, then 30% on quarterly basis": [["0", 0.4],
+                                                                    [f"3{month}", 0.3],  # linear vesting (1)
+                                                                    [f"3{month}", 0.3]],  # linear vesting (2)
+
+    "Seed Round:10% on TGE, 3 months cliff, then 3.60% on a monthly basis": [["0", 0.1],
+                                                                    [f"3{month}", 0.036],  # linear vesting (1)
+                                                                    [f"1{month}", 0.036],  # linear vesting (2)
+                                                                    [f"1{month}", 0.036],  # linear vesting (3)
+                                                                    [f"1{month}", 0.036],  # linear vesting (4)
+                                                                    [f"1{month}", 0.036],  # linear vesting (5)
+                                                                    [f"1{month}", 0.036],  # linear vesting (6)
+                                                                    [f"1{month}", 0.036],  # linear vesting (7)
+                                                                    [f"1{month}", 0.036],  # linear vesting (8)
+                                                                    [f"1{month}", 0.036],  # linear vesting (9)
+                                                                    [f"1{month}", 0.036],  # linear vesting (10)
+                                                                    [f"1{month}", 0.036],  # linear vesting (11)
+                                                                    [f"1{month}", 0.036],  # linear vesting (12)
+                                                                    [f"1{month}", 0.036],  # linear vesting (13)
+                                                                    [f"1{month}", 0.036],  # linear vesting (14)
+                                                                    [f"1{month}", 0.036],  # linear vesting (15)
+                                                                    [f"1{month}", 0.036],  # linear vesting (16)
+                                                                    [f"1{month}", 0.036],  # linear vesting (17)
+                                                                    [f"1{month}", 0.036],  # linear vesting (18)
+                                                                    [f"1{month}", 0.036],  # linear vesting (19)
+                                                                    [f"1{month}", 0.036],  # linear vesting (20)
+                                                                    [f"1{month}", 0.036],  # linear vesting (21)
+                                                                    [f"1{month}", 0.036],  # linear vesting (22)
+                                                                    [f"1{month}", 0.036],  # linear vesting (23)
+                                                                    [f"1{month}", 0.036],  # linear vesting (24)
+                                                                    [f"1{month}", 0.036]],  # linear vesting (25)
+
+    "Public sale:20% unlock at the TGE, then 20% on quarterly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.2],  # linear vesting (1)
+                                                                    [f"3{month}", 0.2],  # linear vesting (2)
+                                                                    [f"3{month}", 0.2],  # linear vesting (3)
+                                                                    [f"3{month}", 0.2]],  # linear vesting (4)
+
+    "Seed Round:20% at the TGE, then 20% on quarterly basis": [["0", 0.2],
+                                                                    [f"3{month}", 0.2],  # linear vesting (1)
+                                                                    [f"3{month}", 0.2],  # linear vesting (2)
+                                                                    [f"3{month}", 0.2],  # linear vesting (3)
+                                                                    [f"3{month}", 0.2]],  # linear vesting (4)
+
+    "Public sale:100% unlocked at TGE":                         [["0", 1]],
+
+    "Public Sale (SHO):20% unlocked, 25% (2021-Q4), 25% (2022-Q1), 20% (2022-Q2), 10% (2022-Q3)": [["0", 0.2],
+                                                                    [f"3{month}", 0.25],  # linear vesting (1)
+                                                                    [f"3{month}", 0.20],  # linear vesting (2)
+                                                                    [f"3{month}", 0.10],  # linear vesting (3)
+                                                                    [f"3{month}", 0.25]],  # linear vesting (4)
+
+    "Seed Round:5% at the TGE, then quarterly vesting 10%. 5% the last quarter": [["0", 0.05],
+                                                                    [f"3{month}", 0.1],  # linear vesting (1)
+                                                                    [f"3{month}", 0.1],  # linear vesting (2)
+                                                                    [f"3{month}", 0.1],  # linear vesting (3)
+                                                                    [f"3{month}", 0.1],  # linear vesting (4)
+                                                                    [f"3{month}", 0.1],  # linear vesting (5)
+                                                                    [f"3{month}", 0.1],  # linear vesting (6)
+                                                                    [f"3{month}", 0.1],  # linear vesting (7)
+                                                                    [f"3{month}", 0.1],  # linear vesting (8)
+                                                                    [f"3{month}", 0.1],  # linear vesting (9)
+                                                                    [f"3{month}", 0.05]],  # linear vesting (10)
+
+    "Public Sale:Remaining 38% unlocked daily until February 2024": [["0", 0.62],
+                                                                    [f"1{month}", 0.0152],  # linear vesting (1)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (2)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (3)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (4)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (5)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (6)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (7)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (8)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (9)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (10)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (11)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (12)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (13)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (14)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (15)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (16)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (17)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (18)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (19)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (20)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (21)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (22)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (23)
+                                                                    [f"1{month}", 0.0152],  # linear vesting (24)
+                                                                    [f"1{month}", 0.0152]],  # linear vesting (25)
+
+    "Public sale:100% unlock at TGE":                            [["0", 1]],
+
+    "Public sale:70% unlocked at the TGE, day 120 and 150 15%": [["0", 0.7],
+                                                                    [f"4{month}", 0.15],  # linear vesting (1)
+                                                                    [f"1{month}", 0.15]],  # linear vesting (2)
+
+    "Public Sale:33.33% unlock at the TGE, then 16.667% monthly release":[["0", 0.33],
+                                                                    [f"1{month}", 0.1667],  # linear vesting (1)
+                                                                    [f"1{month}", 0.1667],  # linear vesting (2)
+                                                                    [f"1{month}", 0.1667],  # linear vesting (3)
+                                                                    [f"1{month}", 0.1667]],  # linear vesting (4)
+
+    "Seed Round:10% unlock at TGE, monthly release over 9 months": [["0", 0.1],
+                                                                    [f"1{month}", 0.1],  # linear vesting (1)
+                                                                    [f"1{month}", 0.1],  # linear vesting (2)
+                                                                    [f"1{month}", 0.1],  # linear vesting (3)
+                                                                    [f"1{month}", 0.1],  # linear vesting (4)
+                                                                    [f"1{month}", 0.1],  # linear vesting (5)
+                                                                    [f"1{month}", 0.1],  # linear vesting (6)
+                                                                    [f"1{month}", 0.1],  # linear vesting (7)
+                                                                    [f"1{month}", 0.1],  # linear vesting (8)
+                                                                    [f"1{month}", 0.1]],  # linear vesting (9)
+
+    "Public Sale:100% unlocked at the TGE":                     [["0", 1]],
+
+    "Sale:30% TGE, then 10% per month":                            [["0", 0.3],
+                                                                    [f"1{month}", 0.1],  # linear vesting (1)
+                                                                    [f"1{month}", 0.1],  # linear vesting (2)
+                                                                    [f"1{month}", 0.1],  # linear vesting (3)
+                                                                    [f"1{month}", 0.1],  # linear vesting (4)
+                                                                    [f"1{month}", 0.1],  # linear vesting (5)
+                                                                    [f"1{month}", 0.1],  # linear vesting (6)
+                                                                    [f"1{month}", 0.1]],  # linear vesting (7)
+
+    "Seed round:15% day 1, quarterly release over 1 year":         [["0", 0.15],
+                                                                    [f"1{month}", 0.2125],  # linear vesting (1)
+                                                                    [f"1{month}", 0.2125],  # linear vesting (2)
+                                                                    [f"1{month}", 0.2125],  # linear vesting (3)
+                                                                    [f"1{month}", 0.2125]],  # linear vesting (4)
+
+    "Public Sale:7.7% at the TGE, then 23.1% each quarter": [["0", 0.077],
+                                                                    [f"1{month}", 0.231],  # linear vesting (1)
+                                                                    [f"1{month}", 0.231],  # linear vesting (2)
+                                                                    [f"1{month}", 0.231],  # linear vesting (3)
+                                                                    [f"1{month}", 0.231]],  # linear vesting (4)
+
+    "Seed round:8,2% unlocked at TGE, day 21 and 28 7,2% and then weekly 1,8% release": [["0", 0.082],
+                                                                    [f"21{day}", 0.072],   # linear vesting (1)
+                                                                    [f"7{day}", 0.072],    # linear vesting (2)
+                                                                    [f"1{month}", 0.072],  # linear vesting (1)
+                                                                    [f"1{month}", 0.072],  # linear vesting (2)
+                                                                    [f"1{month}", 0.072],  # linear vesting (3)
+                                                                    [f"1{month}", 0.072],  # linear vesting (4)
+                                                                    [f"1{month}", 0.072],  # linear vesting (5)
+                                                                    [f"1{month}", 0.072],  # linear vesting (6)
+                                                                    [f"1{month}", 0.072],  # linear vesting (7)
+                                                                    [f"1{month}", 0.072],  # linear vesting (8)
+                                                                    [f"1{month}", 0.072],  # linear vesting (9)
+                                                                    [f"1{month}", 0.072],  # linear vesting (10)
+                                                                    [f"1{month}", 0.072]],  # linear vesting (11)
+
+    "Public Round 2 (SHO):15% unlock on TGE, then from day 28 15% monthly and 10% last month release":[["0", 0.15],
+                                                                    [f"1{month}", 0.15],   # linear vesting (1)
+                                                                    [f"1{month}", 0.15],    # linear vesting (2)
+                                                                    [f"1{month}", 0.15],  # linear vesting (3)
+                                                                    [f"1{month}", 0.15],  # linear vesting (4)
+                                                                    [f"1{month}", 0.15],  # linear vesting (5)
+                                                                    [f"1{month}", 0.1]],  # linear vesting (6)
+
+    "Seed round:0% at the TGE, linear vesting over 12 months":  [["0", 0],
+                                                                    [f"1{month}", 0.0833],  # linear vesting (1)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (2)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (3)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (4)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (5)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (6)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (7)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (8)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (9)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (10)
+                                                                    [f"1{month}", 0.0833],  # linear vesting (11)
+                                                                    [f"1{month}", 0.0833]],  # linear vesting (12)
+
+    "Public Sale (SHO):100% unlock at TGE":                      [["0", 1]],
+
+    "Community Offering (SHO):50% at the TGE & 50% the month after": [["0", 0.5],
+                                                                    [f"1{month}", 0.5]],  # linear vesting (1)
+
+    "Public Sale:100% unlock at TGE":                            [["0", 1]],
+
+    "Seed Round:0% unlock at TGE, 2,5% per month for 40 months": [["0", 0],
+                                                                    [f"1{month}", 0.025],  # linear vesting (1)
+                                                                    [f"1{month}", 0.025],  # linear vesting (2)
+                                                                    [f"1{month}", 0.025],  # linear vesting (3)
+                                                                    [f"1{month}", 0.025],  # linear vesting (4)
+                                                                    [f"1{month}", 0.025],  # linear vesting (5)
+                                                                    [f"1{month}", 0.025],  # linear vesting (6)
+                                                                    [f"1{month}", 0.025],  # linear vesting (7)
+                                                                    [f"1{month}", 0.025],  # linear vesting (8)
+                                                                    [f"1{month}", 0.025],  # linear vesting (9)
+                                                                    [f"1{month}", 0.025],  # linear vesting (10)
+                                                                    [f"1{month}", 0.025],  # linear vesting (11)
+                                                                    [f"1{month}", 0.025],  # linear vesting (12)
+                                                                    [f"1{month}", 0.025],  # linear vesting (13)
+                                                                    [f"1{month}", 0.025],  # linear vesting (14)
+                                                                    [f"1{month}", 0.025],  # linear vesting (15)
+                                                                    [f"1{month}", 0.025],  # linear vesting (16)
+                                                                    [f"1{month}", 0.025],  # linear vesting (17)
+                                                                    [f"1{month}", 0.025],  # linear vesting (18)
+                                                                    [f"1{month}", 0.025],  # linear vesting (19)
+                                                                    [f"1{month}", 0.025],  # linear vesting (20)
+                                                                    [f"1{month}", 0.025],  # linear vesting (1)
+                                                                    [f"1{month}", 0.025],  # linear vesting (2)
+                                                                    [f"1{month}", 0.025],  # linear vesting (3)
+                                                                    [f"1{month}", 0.025],  # linear vesting (4)
+                                                                    [f"1{month}", 0.025],  # linear vesting (5)
+                                                                    [f"1{month}", 0.025],  # linear vesting (6)
+                                                                    [f"1{month}", 0.025],  # linear vesting (7)
+                                                                    [f"1{month}", 0.025],  # linear vesting (8)
+                                                                    [f"1{month}", 0.025],  # linear vesting (9)
+                                                                    [f"1{month}", 0.025],  # linear vesting (10)
+                                                                    [f"1{month}", 0.025],  # linear vesting (11)
+                                                                    [f"1{month}", 0.025],  # linear vesting (12)
+                                                                    [f"1{month}", 0.025],  # linear vesting (13)
+                                                                    [f"1{month}", 0.025],  # linear vesting (14)
+                                                                    [f"1{month}", 0.025],  # linear vesting (15)
+                                                                    [f"1{month}", 0.025],  # linear vesting (16)
+                                                                    [f"1{month}", 0.025],  # linear vesting (17)
+                                                                    [f"1{month}", 0.025],  # linear vesting (18)
+                                                                    [f"1{month}", 0.025],  # linear vesting (19)
+                                                                    [f"1{month}", 0.025]],  # linear vesting (20)
+
+    "Public sale (SHO):100% unlock at TGE":                         [["0", 1]],
+
+    "Seed round:5% unlock at TGE, after one month 23.75% release on monthly basis over 4 months": [["0", 0.05],
+                                                                    [f"1{month}", 0.02375],  # linear vesting (1)
+                                                                    [f"1{month}", 0.02375],  # linear vesting (2)
+                                                                    [f"1{month}", 0.02375],  # linear vesting (3)
+                                                                    [f"1{month}", 0.02375]]  # linear vesting (4)
 }
 
 df = pd.read_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/price_token_test_slug.csv")
