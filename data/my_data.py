@@ -13,4 +13,4 @@ for index, row in dao_maker_df.iterrows():
         result = cg.get_coin_chart_dataframe(coin_numerical_id)
         df_values = df_values.append(result, ignore_index=True)
 
-df_values.to_csv('/Users/eaxes/DA Projects/CMC/data/collected_data/coins_date_and_values')
+df_values.to_csv('/Users/eaxes/da Projects/CMC/data/collected_data/coins_date_and_values')

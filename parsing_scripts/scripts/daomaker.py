@@ -223,9 +223,9 @@ def get_data_from_dao_with_median_test():
 
 
 
-# get_data_from_dao().to_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/mined_table2.csv")
-#get_data_from_dao_with_median().to_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/price_token_test.csv")
-get_data_from_dao_with_median_test().to_csv("/Users/eaxes/DA Projects/CMC/data/collected_data/mined/price_token_test_slug.csv")
+# get_data_from_dao().to_csv("/Users/eaxes/da Projects/CMC/data/collected_data/mined/mined_table2.csv")
+#get_data_from_dao_with_median().to_csv("/Users/eaxes/da Projects/CMC/data/collected_data/mined/price_token_test.csv")
+get_data_from_dao_with_median_test().to_csv("/Users/eaxes/da Projects/CMC/data/collected_data/mined/price_token_test_slug.csv")
 
 
 def str_schedule_unit_to_arr(schedule):
