@@ -131,7 +131,7 @@ def get_data_from_dao_with_median():
 
         if type(coingecko_id) is None:
             coingecko_id = 'default'
-        coingecko_id_numerical = 'default'
+        coingecko_id_numerical = 'default'hym
 
         if coingecko_id != "default" and type(coingecko_id) is not None:
             coingecko_id_numerical = cg.get_token_numerical_id(coingecko_id)
